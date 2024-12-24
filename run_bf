@@ -6,7 +6,6 @@ while getopts ":f:" file; do
     echo "arg: $file"
     case ${file} in
         f)
-            echo "correct choise -f ${OPTARG}"
             ~/Desktop/brainfuck/build/brainfuck "./${OPTARG}"
             ;;
         ?)
