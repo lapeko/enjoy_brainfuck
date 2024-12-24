@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+echo "run..."
+
+while getopts ":f:" file; do
+    echo "arg: $file"
+    case ${file} in
+        f)
+            echo "correct choise -f ${OPTARG}"
+            ~/Desktop/brainfuck/build/brainfuck "./${OPTARG}"
+            ;;
+        ?)
+            echo "Invalid option ${file}" >&2
+            exit 1;
+            ;;
+    esac
+done
