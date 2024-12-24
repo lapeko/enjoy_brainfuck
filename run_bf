@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-echo "run..."
-
 while getopts ":f:" file; do
-    echo "arg: $file"
     case ${file} in
         f)
             ~/Desktop/brainfuck/build/brainfuck "./${OPTARG}"
